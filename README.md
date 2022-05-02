@@ -106,7 +106,6 @@ function test() {
   var request = '$sum(Account.Order.Product.(Price * Quantity))';
   var result = Jsonata.jsonata(request).evaluate(json);
   console.log(result);
-
 }
 ```
 
