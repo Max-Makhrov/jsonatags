@@ -4,7 +4,7 @@ Jsonatags is a library that enables the use of the [Jsonata.js](https://github.c
 
 ## Add the library to your project
 
-library. This is how you add it to your project:
+To add the library to your project:
 
 1.  Click "Add a library" in the Libraries section of the left pane in the Apps Script IDE.
 2.  Enter the project key (`1jH4Denh3jCoqRxDV8V2VLxG2xVzkoe4B57Jg0D66RpG1MMgjFZEeG6Kd`) in the "Script ID" field, and click "Look up".
@@ -95,7 +95,7 @@ function test() {
   var request = '$sum(Account.Order.Product.(Price * Quantity))';
   var result = Jsonata.jsonata(request).evaluate(json);
   console.log(result);
-  
+
 }
 ```
 
@@ -103,7 +103,7 @@ function test() {
 
 V1. Copied the version 1.8.6 of the original library and adapted it for `google-apps-script`
 
-V2. Commented lines 523-532, starting from `if (!arrayOK) {`. This resolved the issue with the usage of the `filter` function.
+V2. Commented lines 523-532, starting from `if (!arrayOK) {`. This resolved the issue with the usage of the [`join` function](https://docs.jsonata.org/string-functions#join).
 
 ## License
 
