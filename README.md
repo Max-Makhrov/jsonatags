@@ -1,4 +1,4 @@
-# jsonatags
+# Jsonatags
 
 Jsonatags is a library that enables the use of the [Jsonata.js](https://github.com/jsonata-js/jsonata) library in Google Apps Script. API docs are available [here](https://docs.jsonata.org/overview.html).
 
