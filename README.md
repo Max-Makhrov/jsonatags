@@ -13,12 +13,13 @@ To add the library to your project:
 
 ## Usage
 
-```javascript
-// try live here
-// https://try.jsonata.org/
+The samples below are available in my [test project](https://script.google.com/u/0/home/projects/1jiZwgl_WZgax0wz4PZ5RwGcCoF04fhkRcKKODGrL0wJsNnjPegHPAsGf/edit) with the installed library.
 
-function test() {
-  var json = {
+### Sample JSON
+
+```js
+function getSampleJson_() {
+  return {
     "Account": {
       "Account Name": "Firefly",
       "Order": [
@@ -90,12 +91,47 @@ function test() {
         }
       ]
     }
-  }
+  };
+}
+```
 
+### Sample #1
+
+```js
+// try live here
+// https://try.jsonata.org/
+
+function test() {
+  var json = getSampleJson_();
   var request = '$sum(Account.Order.Product.(Price * Quantity))';
   var result = Jsonata.jsonata(request).evaluate(json);
   console.log(result);
 
+}
+```
+
+### Sample #2
+
+```js
+function test_jsonata() {
+  var json = getSampleJson_();
+
+  var requests = [
+    // Get array of JSONs
+    "Account.Order.Product.{" +
+    "'product': `Product Name`," +
+    "'color': Description.Colour}",
+    // Get array of arrays
+    "Account.Order.Product.[" +
+    "`Product Name`," +
+    "Description.Colour]"
+  ];
+  
+  var result;
+  for (var i = 0; i < requests.length; i++) {
+    result = Jsonata.jsonata(requests[i]).evaluate(json);
+    console.log(result);
+  }
 }
 ```
 
