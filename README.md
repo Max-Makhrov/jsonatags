@@ -13,7 +13,7 @@ To add the library to your project:
 
 ## Usage
 
-The samples below are available in my [test project](https://script.google.com/u/0/home/projects/1jiZwgl_WZgax0wz4PZ5RwGcCoF04fhkRcKKODGrL0wJsNnjPegHPAsGf/edit) with the installed library.
+The sample code #2 below is available in my [test project](https://script.google.com/u/0/home/projects/1jiZwgl_WZgax0wz4PZ5RwGcCoF04fhkRcKKODGrL0wJsNnjPegHPAsGf/edit) with the installed library.
 
 ### Sample JSON
 
@@ -101,7 +101,7 @@ function getSampleJson_() {
 // try live here
 // https://try.jsonata.org/
 
-function test() {
+function test_jsonata() {
   var json = getSampleJson_();
   var request = '$sum(Account.Order.Product.(Price * Quantity))';
   var result = Jsonata.jsonata(request).evaluate(json);
